@@ -1,0 +1,35 @@
+'''
+Input is a string. Find the first A and the last A. For every char in between these two A, print the char
+and add 'A' to that. 
+For eg - input - 12AbcdA123Axyz
+output 
+bA
+cA
+dA
+AA
+1A
+2A
+3A
+Check for conditions where the input has only one A or no A at all.
+'''
+# string is inputed
+string = '12Abcd123Axyz'
+# find function is used to find 'A'
+first = string.find('A')
+last = string.rfind('A')
+
+if first == -1 or last == -1 or first == last :
+    print("No or only one 'A' found.")
+else:
+    for i in range(first+1, last):
+        print(string[i] + 'A')
+
+'''
+output:
+bA
+cA
+dA
+1A
+2A
+3A
+'''
