@@ -27,7 +27,7 @@ def find_word(input_str):
     if search is None:
         search = find_bet("C", "C", input_str)
     if search is None:
-        print("No suitable characters found in the input string.")
+        print("No characters found in the input string.")
     else:
         print(search)
 
