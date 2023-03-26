@@ -15,7 +15,7 @@ input_str = input("Enter a string: ")
 def find_bet(first_char, second_char, input_str):
     first_word = input_str.find(first_char)
     last_word = input_str.rfind(second_char)
-    if first_word == -1 or last_word == -1 :
+    if first_word ==  last_word  :
         return None
     return input_str[first_word+1:last_word]
 
@@ -29,6 +29,7 @@ def find_word(input_str):
         print("No suitable characters found in the input string.")
     else:
         print(search)
+
 
 find_word(input_str)
 
