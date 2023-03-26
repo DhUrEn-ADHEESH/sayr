@@ -8,26 +8,29 @@
 
     2.2 Calculate replenish supply at the starting of the day for hot items, every 5 customers for all items and only cold items  at the every end of the day.
 '''
-def findBetween(first_char, second_char, input_str):
+
+input_str = input("Enter a string: ")
+
+
+def find_bet(first_char, second_char, input_str):
     first_word = input_str.find(first_char)
     last_word = input_str.rfind(second_char)
     if first_word == -1 or last_word == -1 :
         return None
     return input_str[first_word+1:last_word]
 
-def process_string(input_str):
-    result = findBetween("A", "A", input_str)
-    if result is None:
-        result = findBetween("B", "B", input_str)
-    if result is None:
-        result = findBetween("C", "C", input_str)
-    if result is None:
+def find_word(input_str):
+    search = find_bet("A", "A", input_str)
+    if search is None:
+        search = find_bet("B", "B", input_str)
+    if search is None:
+        search = find_bet("C", "C", input_str)
+    if search is None:
         print("No suitable characters found in the input string.")
     else:
-        print(result)
+        print(search)
 
-input_str = input("Enter a string: ")
-process_string(input_str)
+find_word(input_str)
 
 
 
