@@ -17,7 +17,8 @@ def find_bet(first_char, second_char, input_str):
     last_word = input_str.rfind(second_char)
     if first_word ==  last_word  :
         return None
-    return input_str[first_word+1:last_word]
+    else:
+        return input_str[first_word+1:last_word]
 
 def find_word(input_str):
     search = find_bet("A", "A", input_str)
